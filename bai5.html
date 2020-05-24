@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <input type="text" placeholder="Enter your Year of Birth" id="yearOfBirth">
+    <button id="age" onclick="CaculateAge()">Your age is</button><br>
+    <p id="ageResult"></p>
+    <script>
+        let CaculateAge = () => {
+            let d = document.getElementById("ageResult")
+            let a = document.getElementById("yearOfBirth").value
+            let n = Number(a)
+            console.log(n)
+            let text = ""
+            let y = new Date()
+            let i = y.getFullYear() - n
+            if (isNaN(n)) {
+                text = "Please enter a number"
+            } else {
+                text = i
+            }
+            do {
+                alert("Enter a number smaller than 2020")
+                break;
+            } while (n > 2020)
+            d.innerHTML = "Result: " + text
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 7</title>
+</head>
+
+<body>
+    <select name="" id="makeColor">
+        <option value="">Choose color</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="yellow">yellow</option>
+        <option value="blue">blue</option>
+    </select>
+    <button onclick="changeColor()">Change Color</button>
+    <script>
+        function changeColor() {
+            let select = document.getElementById("makeColor").value
+            switch (select) {
+                case "":
+                    document.body.style.backgroundColor = "white"
+                    break;
+                case "red":
+                    document.body.style.backgroundColor = "red"
+                    break;
+                case "green":
+                    document.body.style.backgroundColor = "green"
+                    break;
+                case "yellow":
+                    document.body.style.backgroundColor = "yellow"
+                    break;
+                case "blue":
+                    document.body.style.backgroundColor = "blue"
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

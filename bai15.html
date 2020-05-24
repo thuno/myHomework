@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 15: Caculator</title>
+    <style>
+        td {
+            margin: 10px;
+            padding: 10px;
+            font-size: 50px;
+            border: 1px solid black;
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            cursor: pointer;
+        }
+        p {
+            margin: 5px auto;
+            padding: 5px;
+            font-size: 50px;
+            text-align: right;
+            border: 1px solid black;
+            width: 480px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div style="border: 1px solid black;margin: 50px auto;width: 500px;">
+        <p id="result"></p>
+        <table id="myCaculator">
+            <tr>
+                <td onclick="nine()">9</td>
+                <td onclick="plus()">+</td>
+                <td onclick="minus()">-</td>
+                <td onclick="AC()">AC</td>
+            </tr>
+            <tr>
+                <td onclick="eight()">8</td>
+                <td onclick="seven()">7</td>
+                <td onclick="six()">6</td>
+                <td onclick="multiply()">x</td>
+            </tr>
+            <tr>
+                <td onclick="five()">5</td>
+                <td onclick="four()">4</td>
+                <td onclick="three()">3</td>
+                <td onclick="divide()">/</td>
+            </tr>
+            <tr>
+                <td onclick="two()">2</td>
+                <td onclick="one()">1</td>
+                <td onclick="zero()">0</td>
+                <td onclick="equal()">=</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        let num = document.getElementById("result")
+        let insertNum = 0
+        num.innerHTML = insertNum
+        
+        function AC() {
+            num.innerHTML = 0
+        }
+        function plus() {
+            insertNum = insertNum + "+"
+            num.innerHTML = insertNum
+        }
+        function minus() {
+            insertNum = insertNum + "-"
+            num.innerHTML = insertNum
+        }
+        function multiply() {
+            insertNum = insertNum + "*"
+            num.innerHTML = insertNum
+        }
+        function divide() {
+            insertNum = insertNum + "/"
+            num.innerHTML = insertNum
+        }
+        function equal() {
+            insertNum = eval(insertNum)
+            num.innerHTML = insertNum
+        }
+
+        function zero() {
+            if(insertNum == 0) {
+                insertNum = 0
+                num.innerHTML = insertNum
+            }else {
+                insertNum = insertNum + "0"
+                num.innerHTML = insertNum
+            }
+        }
+        function one() {
+            if(insertNum == 0) {
+                insertNum = 1
+                num.innerHTML = insertNum
+            }else {
+                insertNum = insertNum + "1"
+                num.innerHTML = insertNum
+            }
+        }
+        function two() {
+            if(insertNum == 0) {
+                insertNum = 2
+                num.innerHTML = insertNum
+            }else {
+                insertNum = insertNum + "2"
+                num.innerHTML = insertNum
+            }
+        }
+        function three() {
+            if(insertNum == 0) {
+                insertNum = 3
+                num.innerHTML = insertNum
+            }else {
+                insertNum = insertNum + "3"
+                num.innerHTML = insertNum
+            }
+        }
+        function four() {
+            if(insertNum == 0) {
+                insertNum = 4
+                num.innerHTML = insertNum
+            }else {
+                insertNum = insertNum + "4"
+                num.innerHTML = insertNum
+            }
+        }
+        function five() {
+            if(insertNum == 0) {
+                insertNum = 5
+                num.innerHTML = insertNum
+            }else {
+                insertNum = insertNum + "5"
+                num.innerHTML = insertNum
+            }
+        }
+        function six() {
+            if(insertNum == 0) {
+                insertNum = 6
+                num.innerHTML = insertNum
+            }else {
+                insertNum = insertNum + "6"
+                num.innerHTML = insertNum
+            }
+        }
+        function seven() {
+            if(insertNum == 0) {
+                insertNum = 7
+                num.innerHTML = insertNum
+            }else {
+                insertNum = insertNum + "7"
+                num.innerHTML = insertNum
+            }
+        }
+        function eight() {
+            if(insertNum == 0) {
+                insertNum = 8
+                num.innerHTML = insertNum
+            }else {
+                insertNum = insertNum + "8"
+                num.innerHTML = insertNum
+            }
+        }
+        function nine() {
+            if(insertNum == 0) {
+                insertNum = 9
+                num.innerHTML = insertNum
+            }else {
+                insertNum = insertNum + "9"
+                num.innerHTML = insertNum
+            }
+        }
+    </script>
+</body>
+</html>

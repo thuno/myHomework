@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,4 +32,39 @@
     </script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <input type="text" placeholder="Enter your Year of Birth" id="yearOfBirth">
+    <button id="age" onclick="CaculateAge()">Your age is</button><br>
+    <p id="ageResult"></p>
+    <script>
+        let CaculateAge = () => {
+            let d = document.getElementById("ageResult")
+            let a = document.getElementById("yearOfBirth").value
+            let n = Number(a)
+            console.log(n)
+            let text = ""
+            let y = new Date()
+            if (isNaN(n)) {
+                text = "pls enter a number"
+            } else {
+                text = y.getFullYear() - n
+            }
+            d.innerHTML = "Result: " + text
+        }
+
+    </script>
+</body>
+
+>>>>>>> 13bbc325148b8f64b242b5a9e543136b5049c931
 </html>

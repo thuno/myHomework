@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,11 @@
             margin: 1px;
             padding: 1px;
         }
+
         ul {
             list-style-type: none;
         }
+
         ul li {
             height: 20px;
             margin: 3px;
@@ -21,6 +24,7 @@
         }
     </style>
 </head>
+
 <body>
     <div style="border: 2px solid black;box-sizing: border-box;">
         <h2>My to do list</h2>
@@ -35,63 +39,64 @@
     </div>
     <script>
         function close_append() {
-    var myList = document.getElementsByTagName("li");
-    for (let i = 0; i < myList.length; i++) {
-        var span = document.createElement("span");
-        var txt = document.createTextNode("\u00D7");
-        span.className = "close";
-        span.append(txt);
-        myList[i].append(span);
-    }
-}
-close_append()
-
-// click on a close button to remove the current list item
-function removeItem() {
-    var close = document.getElementsByClassName("close");
-    for (let i = 0; i < close.length; i++) {
-        close[i].onclick = function () {
-            var div = this.parentElement;
-            div.style.display = "none"
+            var myList = document.getElementsByTagName("li");
+            for (let i = 0; i < myList.length; i++) {
+                var span = document.createElement("span");
+                var txt = document.createTextNode("\u00D7");
+                span.className = "close";
+                span.append(txt);
+                myList[i].append(span);
+            }
         }
-    }
-}
-removeItem()
+        close_append()
 
-// Add a checked symbol when clicking on a list item
-let list = document.querySelector('ul');
-list.addEventListener('click', function (ev) {
-    if (ev.target.tagName === 'li') {
-        ev.target.classList.toggle('checked')
-    }
-}, false);
-
-//Create a new list item when clicking on the Add button
-function addWork() {
-    var li = document.createElement("li");
-    var inputValue = document.getElementById("myInput").value;
-    var t = document.createTextNode(inputValue);
-    li.appendChild(t);
-    if (inputValue === '') {
-        alert("Write your work pls!");
-    } else {
-        document.getElementById("myUL").appendChild(li);
-    }
-    document.getElementById("myInput").value = "";
-
-    var span = document.createElement("span");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.append(txt);
-    li.append(span);
-
-    for (let i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
-            var div = this.parentElement;
-            div.style.display = "none";
+        // click on a close button to remove the current list item
+        function removeItem() {
+            var close = document.getElementsByClassName("close");
+            for (let i = 0; i < close.length; i++) {
+                close[i].onclick = function () {
+                    var div = this.parentElement;
+                    div.style.display = "none"
+                }
+            }
         }
-    }
-}
+        removeItem()
+
+        // Add a checked symbol when clicking on a list item
+        let list = document.querySelector('ul');
+        list.addEventListener('click', function (ev) {
+            if (ev.target.tagName === 'li') {
+                ev.target.classList.toggle('checked')
+            }
+        }, false);
+
+        //Create a new list item when clicking on the Add button
+        function addWork() {
+            var li = document.createElement("li");
+            var inputValue = document.getElementById("myInput").value;
+            var t = document.createTextNode(inputValue);
+            li.appendChild(t);
+            if (inputValue === '') {
+                alert("Write your work pls!");
+            } else {
+                document.getElementById("myUL").appendChild(li);
+            }
+            document.getElementById("myInput").value = "";
+
+            var span = document.createElement("span");
+            var txt = document.createTextNode("\u00D7");
+            span.className = "close";
+            span.append(txt);
+            li.append(span);
+
+            for (let i = 0; i < close.length; i++) {
+                close[i].onclick = function () {
+                    var div = this.parentElement;
+                    div.style.display = "none";
+                }
+            }
+        }
     </script>
 </body>
+
 </html>

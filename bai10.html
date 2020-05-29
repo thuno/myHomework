@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,4 +52,59 @@
     </script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 10</title>
+</head>
+
+<body>
+    <div>
+        <p id="showText" style="display: inline;"></p>
+        <a href="#" id="btnShowMore" onclick="showMore()">Show more</a>
+        <a href="#" id="btnShowLess" onclick="showLess()">Show less</a>
+    </div>
+    <script>
+        // let txt = "Lorem ipsum"
+        let txt = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, libero recusandae, narchitecto reprehenderit sunt ad molestias nemo porro fugit molestiae quidem animi, eaque obcaecati delectus optio quis voluptas corporis?"
+        let showTextP = document.getElementById("showText")
+        let btnShowMore = document.getElementById("btnShowMore")
+        let btnShowLess = document.getElementById("btnShowLess")
+        let maxLength = 50
+        function showText() {
+            if (txt.length <= maxLength) {
+                showTextP.innerHTML = txt
+                btnShowMore.style.display = "none"
+                btnShowLess.style.display = "none"
+            } else {
+                let shortText = getShortText(txt)
+                showTextP.innerHTML = shortText
+                btnShowLess.style.display = "none"
+            }
+        }
+
+        function showMore() {
+            showTextP.innerHTML = txt
+            btnShowMore.style.display = "none"
+            btnShowLess.style.display = "block"
+        }
+
+        function showLess() {
+            showTextP.innerHTML = getShortText(txt)
+            btnShowMore.style.display = "block"
+            btnShowLess.style.display = "none"
+        }
+
+        function getShortText(str) {
+            return str.substr(0, maxLength) + "..."
+        }
+        showText()
+    </script>
+</body>
+
+>>>>>>> 13bbc325148b8f64b242b5a9e543136b5049c931
 </html>

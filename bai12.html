@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,4 +22,29 @@
         }
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 12</title>
+</head>
+<body>
+    <label for="quantity">Quantity</label>
+    <input type="number" name="quantity" id="quantity" placeholder="Enter a number">
+    <label for="price">Price</label>
+    <input type="number" name="price" id="price" placeholder="Enter a number"><br><br>
+    <button onclick="totalPrice()">Caculate Price</button>
+    <label for="total">Total Price</label>
+    <p name="total" id="total" style="border: 1px solid black;width: 200px;height: 15px;"></p>
+    <script>
+        function totalPrice() {
+            let quan = document.getElementById("quantity").value
+            let price = document.getElementById("price").value
+            document.getElementById("total").innerHTML = quan*price
+        }
+    </script>
+</body>
+>>>>>>> 13bbc325148b8f64b242b5a9e543136b5049c931
 </html>
